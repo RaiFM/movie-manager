@@ -12,17 +12,11 @@
     <!-- <p> {{ director }}</p> -->
     <table>
         <thead>
-            <th>Title</th>
-            <th>Director</th>
-            <th>Release</th>
-            <th>Genre</th>
+            <th>Filmes Cadastrados</th>
         </thead>
         {% for mov in movies %}
         <tbody>
-            <td> {{ mov.title }}</td>
-            <td> {{ mov.director }}</td>
-            <td> {{ mov.release }}</td>
-            <td> {{ mov.genre }}</td>
+            <td><a href="{% url 'movie' mov.id %}">{{ mov.title }}</a></td>
         </tbody>
         {% endfor %}
     </table>

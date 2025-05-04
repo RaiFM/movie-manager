@@ -6,14 +6,17 @@ from .models import movie
 
 def index(request):
     mov = movie.objects.all()
-    # mov = movie.objects.get(id=pk)
 
     context = {
-        # 'movie': 'How to train your dragon',
-        # 'director': 'John Powell'
         'movies': mov,
     }
 
     return render(request, 'index.html', context)
 
+def mov(request, pk):
+    filme = movie.objects.get(id=pk)
 
+    context = {
+        'movie': filme,
+    }
+    return render(request, 'movie.html', context)
