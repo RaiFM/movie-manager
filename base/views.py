@@ -4,14 +4,16 @@ from django.shortcuts import render
 
 from .models import movie
 
-def index(request, pk):
-    # mov = movie.objects.all()
-    mov = movie.objects.get(id=pk)
+def index(request):
+    mov = movie.objects.all()
+    # mov = movie.objects.get(id=pk)
 
     context = {
         # 'movie': 'How to train your dragon',
         # 'director': 'John Powell'
-        'movie': mov
+        'movies': mov,
     }
 
     return render(request, 'index.html', context)
+
+

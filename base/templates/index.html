@@ -8,7 +8,7 @@
 <body>
     <h1>Teste de rotas</h1>
 
-    <h2> {{ mov }}</h2>
+    <h2> {{ mov.title }}</h2>
     <!-- <p> {{ director }}</p> -->
     <table>
         <thead>
@@ -17,12 +17,14 @@
             <th>Release</th>
             <th>Genre</th>
         </thead>
+        {% for mov in movies %}
         <tbody>
-            <td> {{ movie.title }}</td>
-            <td> {{ movie.director }}</td>
-            <td> {{ movie.release }}</td>
-            <td> {{ movie.genre }}</td>
+            <td> {{ mov.title }}</td>
+            <td> {{ mov.director }}</td>
+            <td> {{ mov.release }}</td>
+            <td> {{ mov.genre }}</td>
         </tbody>
+        {% endfor %}
     </table>
 </body>
 </html>
