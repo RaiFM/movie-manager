@@ -23,5 +23,5 @@ from base.views import mov
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name = "index" ),
-    path('movie/<int:pk>', mov, name = 'movie')
+    path('movie/<int:pk>', movie_details, name = 'movie')
 ]

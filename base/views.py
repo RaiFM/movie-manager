@@ -13,7 +13,7 @@ def index(request):
 
     return render(request, 'index.html', context)
 
-def mov(request, pk):
+def movie_details(request, pk):
     filme = movie.objects.get(id=pk)
 
     context = {
