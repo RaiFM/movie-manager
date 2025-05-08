@@ -1,22 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Movie Manager</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Teste de rotas</h1>
+    <h1>Movie Manager</h1>
 
-    <h2> {{ mov.title }}</h2>
-    <!-- <p> {{ director }}</p> -->
     <table>
         <thead>
-            <th>Filmes Cadastrados</th>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Lançamento</th>
+            <th>Gênero</th>
         </thead>
         {% for mov in movies %}
         <tbody>
             <td><a href="{% url 'movie' mov.id %}">{{ mov.title }}</a></td>
+            <td>{{ mov.director }}</td>
+            <td>{{ mov.release }}</td>
+            <td>{{ mov.genre }}</td>
         </tbody>
         {% endfor %}
     </table>
