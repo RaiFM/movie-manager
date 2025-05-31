@@ -113,6 +113,28 @@ body {
   background-color: var(--accent-color);
 }
 
+.btn-admin {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-admin:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 2.2rem;
@@ -172,5 +194,26 @@ body {
 
   .btn-back {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .btn-admin {
+      top: 10px;
+      right: 10px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn-admin {
+      position: static;
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+    }
   }
 }
