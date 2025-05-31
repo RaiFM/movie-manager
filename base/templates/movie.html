@@ -1,18 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filme</title>
-</head>
-<body>
-    <h1> Informações do filme </h1>
-
-    <h2> {{movie.title}}</h2>
-    <p> {{ movie.director }}</p>
-    <p> {{ movie.release }}</p>
-    <p> {{ movie.genre }}</p>
-
-    <a href="{% url 'index' %}">Voltar</a>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informações do Filme</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Informações do Filme</h1>
+    </header>
+    <main class="movie-detail">
+      <h2 class="movie-title">{{ movie.title }}</h2>
+      <p><strong>Diretor:</strong> {{ movie.director }}</p>
+      <p><strong>Lançamento:</strong> {{ movie.release }}</p>
+      <p><strong>Gênero:</strong> {{ movie.genre }}</p>
+      <a href="{% url 'index' %}" class="btn-back">Voltar</a>
+    </main>
+  </body>
 </html>
