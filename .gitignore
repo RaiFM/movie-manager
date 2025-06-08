@@ -3,3 +3,7 @@ venv
 .venv
 
 __pycache__
+/base/__pycache__
+/base/migrations/__pycache__
+/movie_manager/__pycache__
+/movie_manager/migrations/__pycache__
